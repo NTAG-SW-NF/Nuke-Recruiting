@@ -8,7 +8,12 @@
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; padding: 0; 
-            background-color: #f0f4f8; 
+            /* BACKGROUND IMAGE LOGIC */
+            background-image: url('YOUR_BACKGROUND_FILE_HERE.jpg'); /* CHANGE THIS TO YOUR FILENAME */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f0f4f8; /* Fallback color */
             color: #333; 
             line-height: 1.6;
         }
@@ -27,7 +32,7 @@
             margin: 25px auto; 
             background: white; 
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Slightly deeper shadow for depth against background */
         }
         .section {
             margin-bottom: 25px;
@@ -96,7 +101,14 @@
             margin-top: 10px;
         }
         button:hover { background-color: #003f80; }
-        .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #555; margin-top: 30px; }
+        .footer { 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 0.9em; 
+            color: white; /* Changed footer text to white to show up better over background image */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            margin-top: 30px; 
+        }
 
         @media (max-width: 600px) {
             .form-row { flex-direction: column; }
@@ -150,12 +162,8 @@
             </ul>
         </div>
         
-        <!-- ========================================== -->
-        <!-- INFORMATION INPUT FORM IS RIGHT HERE BELOW -->
-        <!-- ========================================== -->
         <div class="form-container">
             <h2>Request Information or Schedule a Meeting</h2>
-            
             <form action="https://formspree.io/f/xojrowwp" method="POST">
                 <div class="form-row">
                     <div class="form-group">
@@ -167,32 +175,25 @@
                         <input type="text" id="last_name" name="last_name" required>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
-
                 <div class="form-group">
                     <label for="appointment">Preferred Appointment Time:</label>
                     <input type="datetime-local" id="appointment" name="appointment">
                 </div>
-
                 <button type="submit">Submit Request</button>
             </form>
         </div>
-        <!-- ========================================== -->
-        <!-- END OF FORM -->
-        <!-- ========================================== -->
-
     </div>
     <div class="footer">
         <p>&copy; 2026 U.S. Navy Nuclear Field Recruiting. All rights reserved.</p>
     </div>
 </body>
 </html>
+
