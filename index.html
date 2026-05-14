@@ -90,4 +90,140 @@
             color: #002060;
             text-align: center;
         }
-        .form-group { margin-bottom: 18px; 
+        .form-group { margin-bottom: 18px; }
+        .form-row { display: flex; gap: 10px; margin-bottom: 18px; }
+        .form-row .form-group { flex: 1; margin-bottom: 0; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; color: #002060; }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="datetime-local"] { 
+            width: 100%;
+            padding: 11px; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        button { 
+            background-color: #0056b3; 
+            color: white; 
+            padding: 15px 25px; 
+            border: none; 
+            border-radius: 5px;
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #003f80; }
+        .footer { 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 0.9em; 
+            color: white; /* Changed footer text to white to show up better over background image */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            margin-top: 30px; 
+        }
+        @media (max-width: 600px) {
+            .form-row { flex-direction: column; }
+            .container { margin: 15px; padding: 15px; }
+            .header h1 { font-size: 1.7em; }
+            .atom-icon { width: 28px; height: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title-wrapper">
+            <!-- LEFT BOHR ATOM -->
+            <svg class="atom-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="2" fill="#FFCF00" stroke="none"></circle>
+                <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(0 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(60 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(120 12 12)"></ellipse>
+            </svg>
+            
+            <h1>U.S. Navy Nuclear Field</h1>
+            
+            <!-- RIGHT BOHR ATOM -->
+            <svg class="atom-icon" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="2" fill="#FFCF00" stroke="none"></circle>
+                <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(0 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(60 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="10" ry="3" transform="rotate(120 12 12)"></ellipse>
+            </svg>
+        </div>
+        <p>Power the Fleet. Power your Future.</p>
+    </div>
+    <div class="container">
+        
+        <img src="virginia" alt="Navy Nuclear Sailors at work" class="promo-image">
+        <p class="image-caption">Official U.S. Navy Photo: Powering the fleet with precision and teamwork.</p>
+        <div class="section">
+            <h2>Why Choose the Navy Nuclear Field?</h2>
+            <p>Unlock an unparalleled path to a high-tech career with the U.S. Navy's Nuclear Field program. This is an immersive, advanced engineering education that sets you up for success, both in uniform and beyond.</p>
+            <ul>
+                <li><b>Elite Technical Training:</b> Gain hands-on experience with cutting-edge nuclear propulsion technology.</li>
+                <li><b>Accelerated Career Growth:</b> Rapid advancement opportunities and leadership development.</li>
+                <li><b>Substantial Financial Benefits:</b> Receive competitive pay, enlistment bonuses up to $50,000, and full medical and dental benefits.</li>
+                <li><b>College Credit & Degree Potential:</b> Earn extensive college credits for your training, transferring directly into Bachelor's degree programs in engineering and technology.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>A Degree-Level Education, Hands-On</h2>
+            <p>The Navy Nuclear Power School curriculum is rigorous and highly respected. You will delve into subjects like:</p>
+            <ul>
+                <li><b>Nuclear Physics & Reactor Theory:</b> Principles of nuclear power generation.</li>
+                <li><b>Thermodynamics & Fluid Mechanics:</b> Mastering energy transfer and fluid systems.</li>
+                <li><b>Electrical & Electronic Systems:</b> Operating and maintaining complex power distribution and control systems.</li>
+                <li><b>Chemistry & Materials Science:</b> Learning about reactor chemistry and advanced materials.</li>
+            </ul>
+        </div>
+        <img src="ford" alt="Nuclear Engineering Training" class="promo-image">
+        <p class="image-caption">Official U.S. Navy Photo: Real-world operational expertise starts here.</p>
+        <div class="section">
+            <h2>Unmatched Civilian Career Opportunities</h2>
+            <p>Your expertise as a Navy Nuke is in exceptionally high demand. The discipline and technical knowledge you acquire translate directly into careers in:</p>
+            <ul>
+                <li><b>Nuclear Power Plants:</b> Operations, maintenance, and engineering.</li>
+                <li><b>Energy & Utilities:</b> Managing complex power generation systems.</li>
+                <li><b>Data Centers:</b> Overseeing critical infrastructure and power systems.</li>
+                <li><b>Manufacturing & Technology:</b> Roles in advanced automation and systems management.</li>
+            </ul>
+        </div>
+        
+        <div class="form-container">
+            <h2>Request Information or Schedule a Meeting</h2>
+            <form action="https://formspree.io/f/xojrowwp" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment">Preferred Appointment Time:</label>
+                    <input type="datetime-local" id="appointment" name="appointment">
+                </div>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2026 U.S. Navy Nuclear Field Recruiting. All rights reserved.</p>
+    </div>
+</body>
+</html>
